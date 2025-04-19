@@ -12,7 +12,7 @@ function Navbar({ currentLang, onLangChange, selectedRole, setSelectedRole }) {
 
   // Obtener lista de campeones
   useEffect(() => {
-    fetch('https://ddragon.leagueoflegends.com/cdn/14.8.1/data/en_US/champion.json')
+    fetch('https://ddragon.leagueoflegends.com/cdn/15.7.1/data/en_US/champion.json')
       .then((res) => res.json())
       .then((data) => {
         setChampionsList(Object.keys(data.data));
@@ -82,7 +82,7 @@ function Navbar({ currentLang, onLangChange, selectedRole, setSelectedRole }) {
                     onClick={() => handleChampionClick(champ)}
                   >
                     <img
-                      src={`https://ddragon.leagueoflegends.com/cdn/14.8.1/img/champion/${champ}.png`}
+                      src={`https://ddragon.leagueoflegends.com/cdn/15.7.1/img/champion/${champ}.png`}
                       alt={champ}
                       className="rounded-circle me-3"
                       style={{ width: '40px', height: '40px' }}
