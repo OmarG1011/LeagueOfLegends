@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Navbar({ currentLang, onLangChange, selectedRole, setSelectedRole }) {
   const [searchQuery, setSearchQuery] = useState('');
@@ -37,7 +38,7 @@ function Navbar({ currentLang, onLangChange, selectedRole, setSelectedRole }) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow">
       <div className="container-fluid">
-        <a className="navbar-brand fw-bold" href="/">LoL Champs</a>
+      <Link className="navbar-brand fw-bold" to="/">LoL Champs</Link>
 
         <button
           className="navbar-toggler"
